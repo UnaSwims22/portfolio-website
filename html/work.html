@@ -3,9 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Una's Portfolio Website</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/nav.js"></script>
 </head>
+
 <body>
-    
+
+    <div class="cursor"></div>
+
+    <header class="nav-bar">
+        <nav>
+            <div class="nav-wrapper">
+                <div class="pill-container">
+                    <a href="/index.html" class="toggle">Home</a>
+                    <a href="./work.html" class="toggle">Work</a>
+                    <a href="./about.html" class="toggle">About</a>
+                    <a href="./contact.html" class="toggle">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero fade-on-load">
+            <div class="hero-content">
+                <div class="hero-center">
+                    <h1>
+                        Systems <span class="text-primary">Investigations</span>
+                    </h1>
+                    <p>
+                        A collection of interaction systems, design case studies, and technical 
+                        implementations. Each project explores how systems shape behaviour, 
+                        guide interaction, and create meaningful experiences.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+
+                <div class="projects-grid">
+                    <div class="project-card-reveal modal-trigger hover-lift"
+                       data-modal-type="project"
+                       data-project-title="Light & Darkness System"
+                       data-project-image=""
+                       data-project-description="Visibility as a consumable resource that shapes tension and player behaviour."
+                       data-project-tags="UX, Horror Systems, Resource Management"
+                       data-project-details="This system investigates how resource management can generate tension more effectively than scripted events. By treating visibility as a strategic decision, the system creates compound decision-making rather than isolated resource management"
+                       data-case-study="./light-darkness-system.html">
+                       
+
+                       <div class="project-card-image">
+                           <img src="" 
+                                alt="Light & Darkness System"
+                                class="lazy"
+                                data-src="">
+                       </div>
+
+                       <div class="project-card-content">
+                           <h3 class="project-card-title">Light & Darkness System</h3>
+                           <p class="project-card-description">
+                              Visibility as a consumable resource that shapes tension and player behaviour.
+                           </p>
+                           <div class="project-card-tags">
+                               <span class="project-tag">UX</span>
+                               <span class="project-tag">Horror Systems</span>
+                               <span class="project-tag">Resource Management</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-reveal modal-trigger hover-lift"
+                       data-modal-type="project"
+                       data-project-title="Maze Navigation System"
+                       data-project-image=""
+                       data-project-description="Exploration-focused navigation using environmental guidance and uncertainty."
+                       data-project-tags="Navigation, Information Architecture, UX"
+                       data-project-details="This system investigates how mazes can create uncertainty without disorientation. By treating navigation as information acquisition, players gradually construct a mental model through exploration, making the maze function as an information system."
+                       data-case-study="./maze-navigation-system.html">
+                       
+
+                       <div class="project-card-image">
+                           <img src="" 
+                                alt="Maze Navigation System"
+                                class="lazy"
+                                data-src="">
+                       </div>
+
+                       <div class="project-card-content">
+                           <h3 class="project-card-title">Maze Navigation System</h3>
+                           <p class="project-card-description">
+                              Exploration-focused navigation using environmental guidance and uncertainty.
+                           </p>
+
+                           <div class="project-card-tags">
+                              <span class="project-tag">Navigation</span>
+                              <span class="project-tag">Information Architecture</span>
+                              <span class="project-tag">UX</span>
+                           </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-reveal modal-trigger hover-lift"
+                        data-modal-type="project"
+                        data-project-title="Performance Feedback System"
+                        data-project-image=""
+                        data-project-description="Transforming gameplay metrics into understandable behavioural feedback."
+                        data-project-tags="Navigation, Information Architecture, UX"
+                        data-project-details="The system investigates whether behavioural feedback can create stronger replay motivation than abstract scoring."
+                        data-case-study="./performance-feedback-system.html">
+
+                        
+
+                        <div class="project-card-image">
+                           <img src="" 
+                                alt="Performance Feedback System"
+                                class="lazy"
+                                data-src="">
+                       </div>
+
+                       <div class="project-card-content">
+                           <h3 class="project-card-title">Performance Feedback System</h3>
+                           <p class="project-card-description">
+                              Transforming gameplay metrics into understandable behavioural feedback.
+                           </p>
+                           <div class="project-card-tags">
+                              <span class="project-tag">Analytics</span>
+                              <span class="project-tag">Feedback Systems</span>
+                              <span class="project-tag">UX</span>
+                            </div>
+                       </div>
+                    </div>
+
+                    <div class="project-card-reveal modal-trigger hover-lift"
+                       data-modal-type="project"
+                       data-project-title="Protocol Transformation System"
+                       data-project-image=""
+                       data-project-description="Puzzles that remain solvable while changing their rules and transformation protocols."
+                       data-project-tags="Puzzle Design, Systems, Mechanics"
+                       data-project-details="This system challenges players to understand a system rather than memorise an answer"
+                       data-case-study="./protocol-transformation-system.html">
+                       
+
+                       <div class="project-card-image">
+                           <img src="" 
+                                alt="Protocol Transformation System"
+                                class="lazy"
+                                data-src="">
+                      </div>
+
+                       <div class="project-card-content">
+                           <h3 class="project-card-title">Protocol Transformation System</h3>
+                           <p class="project-card-description">
+                              Puzzles that remain solvable while changing their rules and transformation protocols.
+                           </p>
+                           <div class="project-card-tags">
+                              <span class="project-tag">Puzzle Design</span>
+                              <span class="project-tag">Systems</span>
+                              <span class="project-tag">Mechanics</span>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="alt">
+            <div class="container text-center">
+                <h2 class="scroll-reveal"> Want to Learn More?</h2>
+                <p>
+                    Each project is a detailed case study exploring systems design, 
+                    UX thinking, and technical implementation. Click on any project 
+                    to dive deeper into the investigation.
+                </p>
+
+                <a href="./contact.html" class="btn btn-primary scroll-reveal">
+                    Get In Touch
+                </a>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                  <li><a href="/index.html">Home</a></li>
+                  <li><a href="./work.html">Work</a></li>
+                  <li><a href="./about.html">About</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
+               </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                  <li><a href="https://linkedin.com/in/unarine-maswime-b645ba385" target="_blank">LinkedIn</a></li>
+                  <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                  <li><a href="mailto:maswimeunarine@gmail.com">Email</a></li>
+               </ul>
+            </div>
+
+            <div class="footer-section">
+               <h3>Resources</h3>
+               <ul>
+                 <li><a href="" download>Download CV</a></li>
+                 <li><a href="./work.html">All Projects</a></li>
+                 <li><a href="./about.html">About Me</a></li>
+               </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Unarine Maswime. All Rights reserved. | Designer & devloped with care.
+            </p>
+        </div>
+    </footer>
+
 </body>
 </html>

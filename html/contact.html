@@ -3,9 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Una's Portfolio Website</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/nav.js"></script>
 </head>
-<body>
+
+<body class="body">
+     
+    <div class="cursor"></div>
+
+    <header class="nav-bar">
+        <nav>
+            <div class="nav-wrapper">
+                <div class="pill-container">
+                    <a href="/index.html" class="toggle">Home</a>
+                    <a href="/html/work.html" class="toggle">Work</a>
+                    <a href="/html/about.html" class="toggle">About</a>
+                    <a href="/html/contact.html" class="toggle">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero fade-on-load">
+            <div class="hero-content">
+                <div class="hero-center">
+                    <h1>
+                        Let's <span class="text-primary">Connect</span>
+                    </h1>
+                    <p>
+                        I'm always interested in hearing about new opportunities, collaborations, 
+                        and projects. Feel free to reach out with questions or just to say hello.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="grid-2">
+
+                    <div class="scroll-reveal">
+                        <h2>Send a Message</h2>
+                        <p class="contact-description">
+                            Fill out the form and I'll get back to you as soon as possible.
+                        </p>
+
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">
+                                    Your Name
+                                </label>
+                                <input 
+                                  type="text"
+                                  id="name"
+                                  name="name"
+                                  placeholder="John Doe"
+                                  required>
+
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">
+                                    Your Email
+                                </label>
+                                <input 
+                                  type="email"
+                                  id="email"
+                                  name="email"
+                                  placeholder="ronald@example.com"
+                                  required>
+
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">
+                                    Your Message
+                                </label>
+
+                                <textarea 
+                                   name="message" 
+                                   id="message"
+                                   rows="6"
+                                   placeholder="Tell me about your project..."
+                                   required>
+                                </textarea>
+
+                                <span class="error-message"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary contact-submit">
+                                Send Message
+                            </button>
+
+                            <div id="successMessage" class="success-message">
+                                <p> Message sent succesfully! I'll get back to you soon.</p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="scroll-reveal">
+                        <h2>Get In Touch</h2>
+
+                        <div class="contact-info-item">
+                            <h3>Email</h3>
+                            <p>
+                                <a href="mailto:maswimeunarine@gmail.com">
+                                    maswimeunarine@gmail.com
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <h3>Phone</h3>
+                            <p>
+                                <a href="tel:+2783467797">
+                                    +27 (083) 246-7797
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <h3>Location</h3>
+                            <p>
+                                Johannesburg, South Africa
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>Connect Online</h3>
+
+                            <div class="social-links">
+                                <a 
+                                  href="https://linkedin.com/in/unarine-maswime-b645ba385"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  class="btn btn-outline social-btn">
+                                  LinkedIn
+                                </a>
+
+                                <a
+                                  href="https://github.com"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  class="btn btn-outline social-btn">
+                                  GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="alt">
+            <div class="container text-center">
+                <h2 class="scroll-reveal">Response Time</h2>
+                <p class="scroll-reveal response-time-text">
+                    I typically respond to messages within 24-48 hours. For urgent inquiries, 
+                    feel free to reach out via LinkedIn or email directly.
+                </p>
+            </div>
+        </section>
+    </main>
     
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                  <li><a href="/index.html">Home</a></li>
+                  <li><a href="./work.html">Work</a></li>
+                  <li><a href="./about.html">About</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
+               </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                  <li><a href="https://linkedin.com/in/unarine-maswime-b645ba385" target="_blank">LinkedIn</a></li>
+                  <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                  <li><a href="mailto:maswimeunarine@gmail.com">Email</a></li>
+               </ul>
+            </div>
+
+            <div class="footer-section">
+               <h3>Resources</h3>
+               <ul>
+                 <li><a href="" download>Download CV</a></li>
+                 <li><a href="./work.html">My Work</a></li>
+                 <li><a href="./about.html">About Me</a></li>
+               </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Unarine Maswime. All Rights reserved. | Designer & devloped with care.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
