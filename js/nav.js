@@ -1,102 +1,145 @@
 const nav_items = [
-    {label: 'Home', href: 'index.html', id: 'home'},
-    {label: 'Work', href: 'work.html', id: 'work'},
-    {label: 'About', href: 'about.html', id: 'about'},
-    {label: 'Contact', href: 'contact.html', id: 'contact'},
+    {label: 'Home', href: 'index.html'},
+    {label: 'Work', href: 'html/work.html'},
+    {label: 'About', href: 'html/about.html'},
+    {label: 'Contact', href: 'html/contact.html'},
 ];
 
-document.addEventListener('DOMContentLoaded', function () {
-    const navHTML = createNavigation();
-    document.body.insertAdjacentHTML('afterbegin', navHTML);
-    setupNavigationListeners();
-    setActiveNavLink();
-});
-
-function createNavigation() {
-    const menuItems = nav_items
-    .map(item => `
-        <li>
-        <a href="${item.href}" class="nav-link" data-id="${item.id}">
-          ${item.label}
-        </a>
-        </li>
-    `)
-    .join('');
-
-    const navHTML = `
-       <nav>
-           <ul class="nav-menu">
-           ${menuItems}
-           </ul>
-        
-           <button class="mobile-menu-toggle" aria-label="Toggle menu">
-             <span></span>
-             <span></span>
-             <span></span>
-            </button>
-         </div>
-      </nav>
-    `;
-
-    return navHTML
+function resolveHref(rootRelativeHref) {
+    const currentPath = window.location.pathname;
+    const depth = (currentPath.match(/\//g) || []).length - 1;
+    const prefix = depth > 0 ? '../'.repeat(depth) : '';
+ 
+    return prefix + rootRelativeHref;
 }
 
-function setupNavigationListeners() {
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
 
-    const navMenu = document.querySelector('.nav-menu');
 
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-    }
 
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            menuToggle.classList.remove('active');
-        });
-    });
+function buildNavHTML() {
+    const links = nav_items
+    .map(function (item){
+        const href = resolveHref(item.href);
+        return '<a href="' + href + '" class="nav-link" data-root-href="' + item.href + '">'
+        + item.label
+        + '</a>';
+    }).join('');
 
-    window.addEventListener('resize', function () {
-        if (window.innerWidth > 768) {
-            navMenu.classList.remove('active');
-            menuToggle.classList.remove('active');
-        }
-    });
-}
+    return ''
+        + '<nav id="main-nav">'
+        +   '<div class="nav-wrapper">'
+        +     '<div class="pill-container" id="nav-pill">'
+        +       links
+        +     '</div>'
+        +     '<button class="mobile-menu-toggle" id="mobile-toggle" '
+        +             'aria-label="Toggle navigation menu" aria-expanded="false">'
+        +       '<span></span>'
+        +       '<span></span>'
+        +       '<span></span>'
+        +     '</button>'
+ 
+        +   '</div>'
+        + '</nav>';
 
-function setActiveNavLink() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('.nav-link');
+} 
 
-    navLinks.forEach(link => {
-        const href = link.getAttribute('href');
 
-        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-           link.classList.add('active');
+function injectNav() {
+        const root = document.getElementById('nav-root');
+
+        if (root) {
+            root.innerHTML = buildNavHTML();
         } else {
-          link.classList.remove('active');
+            document.body.insertAdjacentHTML('afterbegin', buildNavHTML());
+        }
+}
+
+function setActiveLink() {
+    const currentPath = window.location.pathname;
+ 
+    document.querySelectorAll('.nav-link').forEach(function (link) {
+        const rootHref = link.getAttribute('data-root-href');
+
+        function normalise(path) {
+            return path.replace(/^\//, '').replace(/\/$/, '').replace(/\.html$/, '');
+        }
+ 
+        const normCurrent = normalise(currentPath);
+        const normHref    = normalise(rootHref);
+        const isHome = (normCurrent === '' || normCurrent === 'index')
+                    && (normHref    === '' || normHref    === 'index');
+ 
+        const isActive = isHome || normCurrent.endsWith(normHref);
+ 
+        link.classList.toggle('active', isActive);
+        link.setAttribute('aria-current', isActive ? 'page' : 'false');
+    });
+}
+
+function initScrollState() {
+    const nav = document.getElementById('main-nav');
+    if (!nav) return;
+ 
+    function onScroll() {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+    }
+ 
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+}
+
+function initMobileToggle() {
+    const toggle  = document.getElementById('mobile-toggle');
+    const pill    = document.getElementById('nav-pill');
+    if (!toggle || !pill) return;
+ 
+    toggle.addEventListener('click', function () {
+        const isOpen = pill.classList.toggle('open');
+        toggle.classList.toggle('active', isOpen);
+        toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    pill.querySelectorAll('.nav-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+            pill.classList.remove('open');
+            toggle.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+     window.addEventListener('resize', function () {
+        if (window.innerWidth > 767) {
+            pill.classList.remove('open');
+            toggle.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
         }
     });
 }
 
 function navigateTo(url) {
-  window.location.href = url;
+    window.location.href = url;
 }
-
+ 
 function getCurrentPage() {
-  return window.location.pathname.split('/').pop() || 'index.html';
+    return window.location.pathname.split('/').pop() || 'index.html';
 }
-
+ 
 function isOnPage(pageName) {
-  return getCurrentPage() === pageName;
+    return getCurrentPage() === pageName;
 }
-
-window.navigateTo = navigateTo;
+ 
+window.navigateTo    = navigateTo;
 window.getCurrentPage = getCurrentPage;
-window.isOnPage = isOnPage;
+window.isOnPage      = isOnPage;
+
+document.addEventListener('DOMContentLoaded', function () {
+    injectNav();
+    setActiveLink();
+    initScrollState();
+    initMobileToggle();
+});
+ 
+
+
+    
+
