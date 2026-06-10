@@ -63,13 +63,7 @@ nav {
   padding: 0 var(--spacing-md);
 }
 
-.hero-left h1 {
-  font-size: var(--font-size-5xl);
-}
 
-.hero-left p {
-  font-size: var(--font-size-base);
-}
 
 .project-card-image {
   height: 200px;

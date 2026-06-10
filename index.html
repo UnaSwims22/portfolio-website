@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Una's Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/modal.css">
     <link rel="stylesheet" href="/css/responsive.css">
     <link rel="stylesheet" href="/css/animations.css">
-    <script defer src="/js/nav.js"></script>
+    <link rel="stylesheet" href="/css/components.css">
+
+    <script defer src="/js/nav.js" ></script>
+    <script defer src="/js/animations.js" ></script>
+    <script defer src="/js/modal.js" ></script>
+    <script defer src="/js/cursor.js"></script>
 </head>
 
 <body  class="body">
+    
     <div class="cursor"></div>
 
     <header class="nav-bar">
@@ -29,109 +39,112 @@
     </header>
 
     <main>
+
         <section class="hero">
             <div class="hero-content">
-                <div class="hero-center">
-                  <h1>
-                        I'm an Interaction <br> <span class="text-primary">
-                        Designer & Developer
-                        </span>
-                  </h1>
 
-                  <div class="hero-tags">
+                <h1 class="hero-headline anim-fade-in-up-delay-1">
+                        I'm an Interaction <br> <span class="text-primary">
+                        Designer &amp; Developer
+                        </span>
+                </h1>
+                
+                <div class="hero-tags anim-fade-in-up">
                       <span>Software Developer</span>
                       <span>Creative Technologist</span>
                       <span>UX/UI Designer</span>
-                  </div>
-                
-                  <p>
-                     I design interactive digital experiences that merge visual storytelling, game systems, and motion-driven interfaces. My work explores how interaction design can create immersion, emotional engagement, and playful discovery.
-                  </p>
                 </div>
+                
+                <p class="hero-sub anim-fade-in-up-delay-2">
+                     I design interactive digital experiences that merge visual storytelling, 
+                     game systems, and motion-driven interfaces. My work explores how interaction 
+                     design can create immersion, emotional engagement, and playful discovery.
+                </p>
 
-                <div class="hero-right">
-                    <a href="./html/about.html" class="hero-link magnetic">
+
+        
+
+                <div class="anim-fade-in-up-delay-3">
+                    <a href="./html/about.html" class="btn btn-primary">
                     Get to Know Me
                     </a>
                 </div>
+
             </div>
         </section>
 
         <section id="featured">
             <div class="container">
-                <div class="section-header">
+                
+                <div class="section-header scroll-reveal">
                     <h2>
                         Featured Work
                     </h2>
                 </div>
 
                 <div class="projects-grid">
+
                     <div class="project-card scroll-reveal modal-trigger"
-                    data-modal-type="project"
-                    data-project-title="Light & Darkness System"
-                    data-project-image=""
-                    data-project-description="Visibility as a consumable resource that shapes tension and player behaviour."
-                    data-project-tags="UX, Horror Systems, Resource Management"
-                    data-project-details="This system investigates how resource management can generate tension more effectively than scripted events. By treating visibility as a strategic decision, the system creates compound decision-making rather than isolated resource management"
-                    data-case-study="./html/light-darkness-system.html">
+                         data-delay="1"
+                         data-modal-type="project"
+                         data-project-title="Light &amp; Darkness System"
+                         data-project-image=""
+                         data-project-description="Visibility as a consumable resource that shapes tension and player behaviour."
+                         data-project-tags="UX, Horror Systems, Resource Management"
+                         data-project-details="This system investigates how resource management can generate tension more effectively than scripted events. By treating visibility as a strategic decision, the system creates compound decision-making rather than isolated resource management"
+                         data-case-study="./html/light-darkness-system.html">
                     
-                    
+                        <div class="project-card-image no-image placeholder-1">
+                             <span class="img-label">Light &amp; Darkness System</span>
+                        </div>
 
-                    <div class="project-card-image">
-                        <img src="" 
-                             alt="Light & Darkness System"
-                             class="lazy"
-                             data-src="">
-                    </div>
+                        <div class="project-card-content">
+                            <h3 class="project-card-title">Light &amp; Darkness System</h3>
+                            <p class="project-card-description">
+                                Visibility as a consumable resource that shapes tesion and player behaviour.
+                            </p>
 
-                    <div class="project-card-content">
-                        <h3 class="project-card-title">Light & Darkness System</h3>
-                        <p class="project-card-description">
-                            Visibility as a consumable resource that shapes tesion and player behaviour.
-                        </p>
-
-                        <div class="project-card-tags">
-                            <span class="project-tag"> UX</span>
-                            <span class="project-tag">Horror Systems</span>
-                            <span class="project-tag">Resource Management</span>
+                            <div class="project-card-tags">
+                                <span class="project-tag"> UX</span>
+                                <span class="project-tag">Horror Systems</span>
+                                <span class="project-tag">Resource Management</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                
-                <div class="project-card scroll-reveal modal-trigger"
-                    data-modal-type="project"
-                    data-project-title="Maze Navigation System"
-                    data-project-image=""
-                    data-project-description="Exploration-focused navigation using environmental guidance and uncertainty."
-                    data-project-tags=" Navigation, Information Architecture, UX"
-                    data-project-details="This system investigates how mazes can create uncertainty without disorientation. By treating navigation as information acquisition, players gradually construct a mental model through exploration, making the maze function as an information system. "
-                    data-case-study="./html/maze-navigation-system.html">
+                   <div class="project-card scroll-reveal modal-trigger"
+                     data-delay="2"
+                     data-modal-type="project"
+                     data-project-title="Maze Navigation System"
+                     data-project-image=""
+                     data-project-description="Exploration-focused navigation using environmental guidance and uncertainty."
+                     data-project-tags=" Navigation, Information Architecture, UX"
+                     data-project-details="This system investigates how mazes can create uncertainty without disorientation. By treating navigation as information acquisition, players gradually construct a mental model through exploration, making the maze function as an information system. "
+                     data-case-study="./html/maze-navigation-system.html">
                     
 
-                    
 
-                    <div class="project-card-image">
-                        <img src="" 
-                             alt="Maze Navigation System"
-                             class="lazy"
-                             data-src="">
-                    </div>
+                        <div class="project-card-image no-image placeholder-2">
+                            <span class="img-label">Maze Navigation</span>
+                        </div>
 
-                    <div class="project-card-content">
-                        <h3 class="project-card-title">Maze Navigation System</h3>
-                        <p class="project-card-description">
-                            Exploration-focused navigation using environmental guidance and uncertainty.
-                        </p>
 
-                        <div class="project-card-tags">
+                        <div class="project-card-content">
+                            <h3 class="project-card-title">Maze Navigation System</h3>
+                            <p class="project-card-description">
+                                Exploration-focused navigation using environmental guidance and uncertainty.
+                            </p>
+
+                          <div class="project-card-tags">
                             <span class="project-tag">Navigation</span>
                             <span class="project-tag">Information Architecture</span>
                             <span class="project-tag">UX</span>
                         </div>
                     </div>
                 </div>
-                <div class="">
+
+                <div class="view-all-wrap scroll-reveal">
                    <a href="/html/work.html" class="btn btn-outline">
                     View All Projects
                     </a>
@@ -141,12 +154,14 @@
 
         <section class="alt">
             <div class="container">
-                <div class="section-header">
+
+                <div class="section-header scroll-reveal">
                     <h2>Technical Skills</h2>
                 </div>
 
                 <div class="skills-grid">
-                    <div class="skill-group scroll-reveal">
+
+                    <div class="skill-group scroll-reveal" data-delay="1">
                         <h3>Systems Design</h3>
                         <ul class="skill-list">
                             <li>Interaction Systems</li>
@@ -155,8 +170,8 @@
                         </ul>
                     </div>
 
-                    <div class="skill-group scroll-reveal">
-                        <h3>UX & Interaction Design</h3>
+                    <div class="skill-group scroll-reveal" data-delay="2">
+                        <h3>UX &amp; Interaction Design</h3>
                         <ul class="skill-list">
                             <li>User Research</li>
                             <li>Information Architecture</li>
@@ -164,7 +179,7 @@
                         </ul>
                     </div>
 
-                    <div class="skill-group scroll-reveal">
+                    <div class="skill-group scroll-reveal" data-delay="3">
                         <h3>Game Development</h3>
                         <ul class="skill-list">
                             <li>Unity Engine</li>
@@ -174,22 +189,24 @@
                             <li>Player Feedback Systems</li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="container text-center">
+        <section class="cta-section">
+            <div class="container ">
                 <h2 class="scroll-reveal">Let's Create Something Amazing</h2>
-                <p class="scroll-reveal">
+                <p class="scroll-reveal" data-delay="1">
                     I'm always interested in hearing about new projects, collaborations, 
                     and opportunities to explore how systems can shape behaviour.
                 </p>
-                <a href="/html/contact.html" class="btn btn-primary scroll-reveal">
+                <a href="/html/contact.html" class="btn btn-primary scroll-reveal" data-delay="2">
                     Get In Touch
                 </a>
             </div>
         </section>
+        
     </main>
 
     <footer>
@@ -225,7 +242,7 @@
 
         <div class="footer-bottom">
             <p>
-                &copy; 2026 Unarine Maswime. All Rights reserved. | Designer & devloped with care.
+                &copy; 2026 Unarine Maswime. All Rights reserved. | Designer &amp; devloped with care.
             </p>
         </div>
     </footer>
