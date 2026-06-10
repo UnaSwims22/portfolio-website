@@ -38,7 +38,7 @@
 
         <div class="case-study-header">
             <span class="case-study-label">CASE STUDY</span>
-            <h1 class="case-study-title"></h1>
+            <h1 class="case-study-title"> Maze Navigation System</h1>
             <p class="case-study-subtitle"></p>
         </div>
 
@@ -56,25 +56,22 @@
         </nav>
 
         <section class="case-study-hero-reveal">
-            <div class="case-study-hero-image">
-                <img src="" 
-                     alt="">
-            </div>
+            
 
             <div class="case-study-metadata">
                 <div class="metadata-item">
                     <span class="metadata-label">Role</span>
-                    <span class="metadata-value"></span>
+                    <span class="metadata-value">Designer & Developer</span>
                 </div>
 
                 <div class="metadata-item">
                     <span class="metadata-label">Timeline</span>
-                    <span class="metadata-value"></span>
+                    <span class="metadata-value">3 months</span>
                 </div>
 
                 <div class="metadata-item">
                     <span class="metadata-label">Focus</span>
-                    <span class="metadata-value"></span>
+                    <span class="metadata-value">Functionality</span>
                 </div>
 
                 <div class="metadata-item">
@@ -92,15 +89,16 @@
 
             <div class="section-content">
                 <div class="content-block scroll-reveal">
-                    <h3></h3>
+                    <h3>What is the Maze Navigation System</h3>
                     <p>
-
+                        The Maze Navigation System is an exploration-focused system designed to create uncertainty through spatial design, visibility restrictions, and environmental guidance. Rather than directing players through explicit objectives, the system encourages players to construct their own understanding of the environment through observation and exploration. The system investigates how uncertainty can be maintained without causing frustration or disorientation.
                     </p>
                 </div>
 
                 <div class="content-block scroll-reveal">
                     <h3>Core Concept</h3>
                     <p>
+                        The Maze Navigation System investigates how uncertainty can be used to create exploration without producing frustration. Traditional maze designs often rely on confusion as their primary challenge, but confusion frequently undermines meaningful decision-making. This system instead treats navigation as an information problem, where the player gradually builds understanding of the environment through observation, exploration, and environmental interpretation. The goal was not to create a maze that players could become lost in, but a maze that players could learn.
 
                     </p>
                 </div>
@@ -112,17 +110,17 @@
                     </div>
 
                     <div class="stat-card">
-                        <span class="stat-number">3</span>
+                        <span class="stat-number">4</span>
                         <span class="stat-label">Mechanics</span>
                     </div>
 
                     <div class="stat-card">
-                        <span class="stat-number">12</span>
+                        <span class="stat-number">7</span>
                         <span class="stat-label">Playtesting Sessions</span>
                     </div>
                     
                     <div class="stat-card">
-                        <span class="stat-number">3</span>
+                        <span class="stat-number">2</span>
                         <span class="stat-label">Design Iterations</span>
                     </div>
                 </div>
@@ -139,21 +137,15 @@
                 <div class="content-block scroll-reveal">
                     <h3>Design Challenge</h3>
                     <p>
+                        Maze environments naturally create uncertainty because players possess incomplete spatial information. However, excessive uncertainty can quickly become frustration if players lose the ability to form meaningful navigation strategies. The challenge was therefore to create uncertainty without creating disorientation.
 
                     </p>
                 </div>
 
                 <div class="auote-block scroll-reveal">
                     <blockquote>
-
+                        How can a maze maintain uncertainty while still supporting player orientation and exploration?
                     </blockquote>
-                </div>
-
-                <div class="content-block scroll-reveal">
-                    <h3>Key Questions</h3>
-                    <ul class="content-list">
-                        <li></li>
-                    </ul>
                 </div>
             </div>
         </section>
@@ -168,7 +160,7 @@
                 <div class="content-block scroll-reveal">
                     <h3>Player Research</h3>
                     <p>
-
+                        Early playtests revealed a clear distinction between uncertainty and confusion. Players enjoyed not knowing what was around the next corner, but became frustrated when they could not understand where they had been or where they should explore next. This suggested that exploration becomes engaging when uncertainty is manageable rather than overwhelming.
                     </p>
                 </div>
 
@@ -176,21 +168,21 @@
                     <div class="finding-card">
                         <h4>Finding 1</h4>
                         <p>
-
+                            Navigation is fundamentally about information acquisition.
                         </p>
                     </div>
 
                     <div class="finding-card">
                         <h4>Finding 2</h4>
                         <p>
-
+                            Players do not navigate physical spaces directly; they navigate their understanding of those spaces.
                         </p>
                     </div>
 
                     <div class="finding-card">
                         <h4>Finding 3</h4>
                         <p>
-
+                            This insight shifted development away from creating more complex layouts and towards designing better information systems.
                         </p>
                     </div>
                 </div>
@@ -198,7 +190,7 @@
                 <div class="content-block scroll-reveal">
                     <h3>Design Implications</h3>
                     <p>
-
+                        The environment needed to provide enough information to support decision-making while withholding enough information to maintain tension. This led to a design focused on environmental communication rather than raw maze complexity.
                     </p>
                 </div>
             </div>
@@ -214,22 +206,50 @@
                 <div class="content-block scroll-reveal">
                     <h3>System Architecture</h3>
                     <p>
-
+                        The navigation system operates by controlling information flow. Players begin with limited environmental knowledge and gradually construct a mental model of the space through exploration. The maze therefore functions as an information landscape. Every corridor, landmark, and environmental cue contributes to the player's understanding of the world. As players explore, uncertainty is reduced, confidence increases, and navigation becomes more deliberate.
                     </p>
                 </div>
 
-                <!--Mechanics Breakdown-->
                 <div class="mechanics-grid scroll-reveal">
                     <div class="mechanic-card">
-                        <h4></h4>
-                        <p></p>
+                        <h4>Limited Visibility</h4>
+                        <p>
+                            Players can only perceive a portion of the environment at any given moment. This creates uncertainty about future routes while encouraging cautious exploration and environmental observation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mechanics-grid scroll-reveal">
+                    <div class="mechanic-card">
+                        <h4>Mini-Map System</h4>
+                        <p>
+                            The mini-map provides partial spatial information that supports orientation without fully revealing the maze. It functions as a balancing mechanism, preventing uncertainty from becoming disorientation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mechanics-grid scroll-reveal">
+                    <div class="mechanic-card">
+                        <h4>Environmental Landmarks</h4>
+                        <p>
+                            Unique visual elements act as navigation anchors, helping players construct mental maps of the environment and recognise previously explored locations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mechanics-grid scroll-reveal">
+                    <div class="mechanic-card">
+                        <h4>Information Trigger Zones</h4>
+                        <p>
+                            Specific areas provide contextual information about objectives, hazards, or environmental conditions. These zones support gradual learning rather than direct instruction.
+                        </p>
                     </div>
                 </div>
 
                 <div class="content-block scroll-reveal">
                     <h3>Design Rationale</h3>
                     <p>
-
+                        The system was designed around the idea that uncertainty should encourage exploration rather than prevent it. Every navigation mechanic exists to regulate information rather than movement, ensuring that players remain curious about what lies ahead while retaining enough knowledge to make meaningful decisions.
                     </p>
                 </div>
             </div>
@@ -245,22 +265,28 @@
                 <div class="content-block scroll-reveal">
                     <h3>Technical Approach</h3>
                     <p>
-
+                        The system combines level design, environmental storytelling, mini-map functionality, and trigger-based information delivery into a unified navigation framework.
+                        Rather than relying on objective markers, the implementation focuses on environmental communication. Players learn through observation, allowing navigation to emerge naturally from interaction with the environment.
                     </p>
                 </div>
 
                 <div class="content-block scroll-reveal">
                     <h3>Playtesting Iterations</h3>
                     <p>
-
+                        Initial versions relied heavily on maze complexity, which often produced frustration.
+                        Subsequent iterations introduced mini-map support, but testing revealed that players became overly dependent on it.
+                        The final version balanced mini-map information with environmental landmarks, encouraging players to actively interpret the environment while maintaining orientation.
                     </p>
                 </div>
 
                 <div class="content-block scroll-reveal">
                     <h3>Key Challenges</h3>
                     <ul class="content-list">
-                        <li></li>
+                        <li> Balancing freedom and guidance</li>
                     </ul>
+                    <p>
+                        Too much guidance reduced uncertainty and exploration, while too little guidance reduced confidence and engagement. Achieving the correct balance required multiple iterations focused on information delivery rather than level geometry.
+                    </p>
                 </div>
             </div>
         </section>
@@ -275,18 +301,18 @@
                 <div class="content-block scroll-reveal">
                     <h3>Measurable Impact</h3>
                     <p>
-
+                        Players reported higher levels of exploration, improved orientation, and lower frustration levels compared to earlier versions. The environment successfully encouraged curiosity while maintaining navigational clarity.
                     </p>
                 </div>
                     
                 <div class="outcome-metrics scroll-reveal">
                    <div class="metric">
                         <span class="metric-value">87%</span>
-                        <span class="metric-label">Tension increases</span>
+                        <span class="metric-label">Uncertainty increases</span>
                     </div>
 
                     <div class="metric">
-                        <span class="metric-value">3%</span>
+                        <span class="metric-value">25% increase</span>
                         <span class="metric-label">Session Duration</span>
                     </div>
 
@@ -300,6 +326,7 @@
                 <div class="content-block scroll-reveal">
                     <h3>Player Feedback</h3>
                     <p>
+                        Many players described the maze as feeling "uncertain but fair," suggesting that the system successfully balanced tension and comprehension.
 
                     </p>
                 </div>
@@ -316,30 +343,15 @@
                 <div class="content-block scroll-reveal">
                     <h3>Key Learnings</h3>
                     <p>
+                        The Maze Navigation System reinforced the idea that navigation systems are fundamentally communication systems. Players do not explore environments simply because they are large or complex; they explore because the environment continuously reveals meaningful information.
 
                     </p>
-                </div>
-
-                <div class="learnings-list scroll-reveal">
-                    <div class="learning-item">
-                        <h4></h4>
-                        <p>
-
-                        </p>
-                    </div>
-
-                    <div class="learning-item">
-                        <h4></h4>
-                        <p>
-
-                        </p>
-                    </div>
                 </div>
 
                 <div class="content-block scroll-reveal">
                     <h3>Future Directions</h3>
                     <p>
-
+                        Future iterations could explore procedural generation, adaptive landmark placement, and dynamic environmental guidance systems to further investigate how information shapes exploration behaviour
                     </p>
                 </div>
             </div>
@@ -360,10 +372,10 @@
             <div class="footer-section">
                 <h3>Navigation</h3>
                 <ul>
-                  <li><a href="./index.html">Home</a></li>
-                  <li><a href="./html/work.html">Work</a></li>
-                  <li><a href="./html/about.html">About</a></li>
-                  <li><a href="./html/contact.html">Contact</a></li>
+                  <li><a href="/index.html">Home</a></li>
+                  <li><a href="./work.html">Work</a></li>
+                  <li><a href="./about.html">About</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
                </ul>
             </div>
 

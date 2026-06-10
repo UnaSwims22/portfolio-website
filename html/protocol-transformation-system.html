@@ -38,8 +38,8 @@
 
         <div class="case-study-header">
             <span class="case-study-label">CASE STUDY</span>
-            <h1 class="case-study-title"></h1>
-            <p class="case-study-subtitle"></p>
+            <h1 class="case-study-title">Protocol Transformation System</h1>
+            <p class="case-study-subtitle">Puzzles that remain solvable while changing their rules and transformation protocols.</p>
         </div>
 
         <nav class="case-study-nav">
@@ -56,25 +56,22 @@
         </nav>
 
         <section class="case-study-hero-reveal">
-            <div class="case-study-hero-image">
-                <img src="" 
-                     alt="">
-            </div>
+           
 
             <div class="case-study-metadata">
                 <div class="metadata-item">
                     <span class="metadata-label">Role</span>
-                    <span class="metadata-value"></span>
+                    <span class="metadata-value">Designer & Developer</span>
                 </div>
 
                 <div class="metadata-item">
                     <span class="metadata-label">Timeline</span>
-                    <span class="metadata-value"></span>
+                    <span class="metadata-value">2 months</span>
                 </div>
 
                 <div class="metadata-item">
                     <span class="metadata-label">Focus</span>
-                    <span class="metadata-value"></span>
+                    <span class="metadata-value">UX & Functionality</span>
                 </div>
 
                 <div class="metadata-item">
@@ -92,8 +89,10 @@
 
             <div class="section-content">
                 <div class="content-block scroll-reveal">
-                    <h3></h3>
+                    <h3>What is the Protocol Transformation System</h3>
                     <p>
+                        The Protocol Transformation System is a puzzle framework that transforms collected clue information into dynamic keypad passwords using rule-based protocols. Rather than requiring players to memorise fixed codes, the system requires them to understand and apply transformation rules to information gathered throughout the level.
+                        The system investigates how rule interpretation can create deeper engagement than traditional puzzle solutions.
 
                     </p>
                 </div>
@@ -101,14 +100,16 @@
                 <div class="content-block scroll-reveal">
                     <h3>Core Concept</h3>
                     <p>
+                        The system exists at the intersection of puzzle design and systems thinking. Rather than asking players to locate a password, it asks them to understand the logic that produces a password. In doing so, the challenge shifts from remembering information to reasoning about information.
+
 
                     </p>
                 </div>
 
                 <div class="stats-grid scroll-reveal">
                     <div class="stat-card">
-                        <span class="stat-number">87%</span>
-                        <span class="stat-label">Player tension increases</span>
+                        <span class="stat-number">79%</span>
+                        <span class="stat-label">correctly identified active protocols</span>
                     </div>
 
                     <div class="stat-card">
@@ -117,12 +118,12 @@
                     </div>
 
                     <div class="stat-card">
-                        <span class="stat-number">12</span>
+                        <span class="stat-number">15</span>
                         <span class="stat-label">Playtesting Sessions</span>
                     </div>
                     
                     <div class="stat-card">
-                        <span class="stat-number">3</span>
+                        <span class="stat-number">5</span>
                         <span class="stat-label">Design Iterations</span>
                     </div>
                 </div>
@@ -139,22 +140,21 @@
                 <div class="content-block scroll-reveal">
                     <h3>Design Challenge</h3>
                     <p>
+                        Many puzzle systems rely on fixed solutions. While these systems can initially create moments of discovery, they often struggle to sustain engagement once players understand the answer. The problem is particularly apparent in keypad puzzles, where the challenge frequently ends the moment the player finds the correct code.
+
+For this project, the challenge was to design a puzzle system that remained engaging after information had been collected. The goal was not simply to hide answers more effectively, but to create a second layer of reasoning that would require players to actively process the information they discovered.
 
                     </p>
                 </div>
 
                 <div class="auote-block scroll-reveal">
                     <blockquote>
+                        How can a puzzle remain engaging by requiring players to understand a rule rather than memorise an answer?
 
                     </blockquote>
                 </div>
 
-                <div class="content-block scroll-reveal">
-                    <h3>Key Questions</h3>
-                    <ul class="content-list">
-                        <li></li>
-                    </ul>
-                </div>
+                
             </div>
         </section>
 
@@ -168,7 +168,8 @@
                 <div class="content-block scroll-reveal">
                     <h3>Player Research</h3>
                     <p>
-
+                        Early prototypes relied on static code clues. During testing, players quickly discovered that once a solution had been found, future attempts became exercises in recall rather than reasoning. This reduced replayability and weakened the relationship between clue collection and puzzle solving.
+                        Observation revealed that players enjoyed collecting clues, but often treated clues as direct answers rather than pieces of a larger system. This suggested that the challenge needed to shift away from information acquisition and towards information interpretation.
                     </p>
                 </div>
 
@@ -176,6 +177,7 @@
                     <div class="finding-card">
                         <h4>Finding 1</h4>
                         <p>
+                            Information alone does not create engagement.
 
                         </p>
                     </div>
@@ -183,6 +185,7 @@
                     <div class="finding-card">
                         <h4>Finding 2</h4>
                         <p>
+                            What matters is the realtionship bewtween pieces of infromation.
 
                         </p>
                     </div>
@@ -190,6 +193,7 @@
                     <div class="finding-card">
                         <h4>Finding 3</h4>
                         <p>
+                            When clues function purely as answers, players focus on memorisation. When clues become inputs within a larger system, players are forced to reason about how those inputs interact.
 
                         </p>
                     </div>
@@ -198,6 +202,7 @@
                 <div class="content-block scroll-reveal">
                     <h3>Design Implications</h3>
                     <p>
+                        This led to the creation of transformation protocols. Instead of asking players to discover a code, the system asks them to discover a rule. Clues become raw data, while protocols become the logic that gives that data meaning.
 
                     </p>
                 </div>
@@ -214,21 +219,61 @@
                 <div class="content-block scroll-reveal">
                     <h3>System Architecture</h3>
                     <p>
+                        The Protocol Transformation System operates through a layered information model.
 
+Players first collect clue values distributed throughout the environment. These values are intentionally meaningless on their own. Their significance only emerges once the active protocol has been identified.
+
+The protocol acts as a transformation rule that modifies the collected clues before they can be used as a valid password. This creates a two-stage puzzle structure:
+                         <ul class="content-list">
+                            <li>Gather information</li>
+                            <li>Interpret information</li>
+                         </ul>
                     </p>
                 </div>
 
-                <!--Mechanics Breakdown-->
+                
                 <div class="mechanics-grid scroll-reveal">
                     <div class="mechanic-card">
-                        <h4></h4>
-                        <p></p>
+                        <h4>Code Clue Collection</h4>
+                        <p>
+                            Clues function as raw information rather than direct solutions. Their purpose is not to provide answers, but to supply the inputs required for later transformation. This shifts player attention from memorisation to information gathering.
+                        </p>
                     </div>
                 </div>
+
+                <div class="mechanics-grid scroll-reveal">
+                    <div class="mechanic-card">
+                        <h4>Protocol Identification</h4>
+                        <p>
+                           Players must determine which transformation rule is currently active. This creates a second layer of uncertainty, requiring players to understand the system itself rather than simply locate puzzle pieces.
+                        </p>
+                    </div>
+                </div>
+
+                  <div class="mechanics-grid scroll-reveal">
+                    <div class="mechanic-card">
+                        <h4>Transformation Logic</h4>
+                        <p>
+                           Protocols modify clue values according to predefined rules such as addition, multiplication, or sequence reversal. The mechanic transforms static information into dynamic outcomes, increasing replayability and cognitive engagement.
+                        </p>
+                    </div>
+                </div>
+
+                 <div class="mechanics-grid scroll-reveal">
+                    <div class="mechanic-card">
+                        <h4>Dynamic Password Generation</h4>
+                        <p>
+                           The final password is generated at runtime using both collected clues and the active protocol. This ensures that solutions emerge from system interactions rather than fixed answers.
+                        </p>
+                    </div>
+                </div>
+
+
 
                 <div class="content-block scroll-reveal">
                     <h3>Design Rationale</h3>
                     <p>
+                        The system was designed around the principle that understanding relationships is more engaging than recalling facts. By introducing transformation rules, puzzle solving becomes an exercise in reasoning rather than memorisation. The protocol effectively acts as a lens through which information must be interpreted, encouraging players to think about systems rather than answers.
 
                     </p>
                 </div>
@@ -245,6 +290,10 @@
                 <div class="content-block scroll-reveal">
                     <h3>Technical Approach</h3>
                     <p>
+                        The system was implemented using three interconnected components: the Clue Inventory System, the Protocol Manager, and the Keypad Validation System.
+
+                        The Clue Inventory stores clue values as players discover them. The Protocol Manager determines which transformation rule is currently active. When the player interacts with a keypad, the system dynamically generates the expected password by applying the protocol to the collected clue sequence.
+                        This architecture allows the same clues to produce different solutions depending on the active protocol.
 
                     </p>
                 </div>
@@ -252,6 +301,11 @@
                 <div class="content-block scroll-reveal">
                     <h3>Playtesting Iterations</h3>
                     <p>
+                        The first implementation used static passwords and direct clue-to-code relationships. While functional, players solved puzzles primarily through memorisation.
+
+The second iteration introduced transformation protocols but lacked sufficient onboarding. Players understood the clues but struggled to identify the active rule.
+
+The final iteration integrated protocol tutorials and environmental communication, improving player understanding while preserving puzzle complexity.
 
                     </p>
                 </div>
@@ -259,8 +313,11 @@
                 <div class="content-block scroll-reveal">
                     <h3>Key Challenges</h3>
                     <ul class="content-list">
-                        <li></li>
+                        <li>Balancing complexity and accessibility</li>
                     </ul>
+                    <p>
+                        The primary challenge involved balancing complexity and accessibility. Introducing more transformation rules increased depth but also increased the cognitive demands placed on players. The final design attempts to maintain meaningful reasoning without overwhelming players with unnecessary complexity.
+                    </p>
                 </div>
             </div>
         </section>
@@ -275,23 +332,24 @@
                 <div class="content-block scroll-reveal">
                     <h3>Measurable Impact</h3>
                     <p>
+                        The introduction of protocols significantly increased puzzle engagement. Players spent more time reasoning about clues and demonstrated greater understanding of puzzle logic during playtesting. Replayability improved because solutions were no longer tied to static answers.
 
                     </p>
                 </div>
                     
                 <div class="outcome-metrics scroll-reveal">
                    <div class="metric">
-                        <span class="metric-value">87%</span>
-                        <span class="metric-label">Tension increases</span>
+                        <span class="metric-value">82%</span>
+                        <span class="metric-label">Player Engagement Increases</span>
                     </div>
 
                     <div class="metric">
-                        <span class="metric-value">3%</span>
+                        <span class="metric-value">15 minute</span>
                         <span class="metric-label">Session Duration</span>
                     </div>
 
                     <div class="metric">
-                        <span class="stat-number">80%</span>
+                        <span class="stat-number">75%</span>
                         <span class="stat-label">Playtesting Satisfaction </span>
                     </div>
 
@@ -300,6 +358,7 @@
                 <div class="content-block scroll-reveal">
                     <h3>Player Feedback</h3>
                     <p>
+                        Players frequently described the system as feeling more like "solving a process" than "finding a code." Many reported that the challenge remained engaging even after understanding the clues because the protocol still required interpretation.
 
                     </p>
                 </div>
@@ -316,29 +375,19 @@
                 <div class="content-block scroll-reveal">
                     <h3>Key Learnings</h3>
                     <p>
+                        The Protocol Transformation System demonstrated that complexity can emerge from relationships rather than quantity. The design does not increase challenge by adding more clues; it increases challenge by changing how clues must be understood.
+
+This insight reinforced an important systems-design principle: depth often comes not from adding more content, but from increasing the number of meaningful interactions between existing pieces of content.
 
                     </p>
                 </div>
 
-                <div class="learnings-list scroll-reveal">
-                    <div class="learning-item">
-                        <h4></h4>
-                        <p>
-
-                        </p>
-                    </div>
-
-                    <div class="learning-item">
-                        <h4></h4>
-                        <p>
-
-                        </p>
-                    </div>
-                </div>
+                
 
                 <div class="content-block scroll-reveal">
                     <h3>Future Directions</h3>
                     <p>
+                        Future iterations could explore protocol combinations, conditional transformations, and procedural protocol generation to further expand systemic complexity.
 
                     </p>
                 </div>
@@ -360,10 +409,10 @@
             <div class="footer-section">
                 <h3>Navigation</h3>
                 <ul>
-                  <li><a href="./index.html">Home</a></li>
-                  <li><a href="./html/work.html">Work</a></li>
-                  <li><a href="./html/about.html">About</a></li>
-                  <li><a href="./html/contact.html">Contact</a></li>
+                  <li><a href="/index.html">Home</a></li>
+                  <li><a href="./work.html">Work</a></li>
+                  <li><a href="./about.html">About</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
                </ul>
             </div>
 

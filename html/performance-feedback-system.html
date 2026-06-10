@@ -38,8 +38,8 @@
 
         <div class="case-study-header">
             <span class="case-study-label">CASE STUDY</span>
-            <h1 class="case-study-title"></h1>
-            <p class="case-study-subtitle"></p>
+            <h1 class="case-study-title">Performance Feedback System</h1>
+            <p class="case-study-subtitle">Transforming gameplay metrics into understandable behavioural feedback.</p>
         </div>
 
         <nav class="case-study-nav">
@@ -70,7 +70,7 @@
 
                 <div class="metadata-item">
                     <span class="metadata-label">Focus</span>
-                    <span class="metadata-value"></span>
+                    <span class="metadata-value">UX & Functionality</span>
                 </div>
 
                 <div class="metadata-item">
@@ -98,19 +98,19 @@
                 <div class="content-block scroll-reveal">
                     <h3>Core Concept</h3>
                     <p>
-                        The Performance Feedback System transforms gameplay behaviour into meaningful post-session analysis. Rather than evaluating players through a single score, the system tracks resource management, clue interpretation, survival performance, and decision-making patterns to generate a behavioural summary of the player's experience.
-
+                         The Performance Feedback System was designed to investigate how player behaviour can be communicated more effectively than through traditional scoring systems. Rather than measuring success through a single numerical value, the system translates gameplay actions into meaningful performance insights that help players understand how they played, not simply whether they succeeded.
+                        The system emerged from a broader design challenge within the project. The game's core mechanics revolve around uncertainty, risk assessment, resource management, and information interpretation. However, these decisions often remain invisible once gameplay ends. A player may complete the level successfully without understanding why they succeeded, or fail without understanding what behavioural patterns contributed to that failure. The Performance Feedback System was created to bridge this gap by transforming gameplay data into a readable narrative of player behaviour.
                     </p>
                 </div>
 
                 <div class="stats-grid scroll-reveal">
                     <div class="stat-card">
-                        <span class="stat-number">82%</span>
-                        <span class="stat-label">Player tension increases</span>
+                        <span class="stat-number">84%</span>
+                        <span class="stat-label">Player interaction increased</span>
                     </div>
 
                     <div class="stat-card">
-                        <span class="stat-number">3</span>
+                        <span class="stat-number">5</span>
                         <span class="stat-label">Mechanics</span>
                     </div>
 
@@ -137,22 +137,24 @@
                 <div class="content-block scroll-reveal">
                     <h3>Design Challenge</h3>
                     <p>
+                        Traditional score systems communicate success but rarely communicate behaviour.
+                        <ul class="content-list">
+                            <li>What decisions contributed to success.</li>
+                            <li>Which mistakes were most costly.</li>
+                            <li>How their playstyle compares to other approaches</li>
+                        </ul>
 
+                        
                     </p>
                 </div>
 
                 <div class="auote-block scroll-reveal">
                     <blockquote>
-
+                        How can post-session feedback help players understand and improve their decision-making rather than simply evaluate their performance?
                     </blockquote>
                 </div>
 
-                <div class="content-block scroll-reveal">
-                    <h3>Key Question</h3>
-                    <ul class="content-list">
-                        <li>Can behavioural feedback generate stronger replay motivation than traditional numerical scoring systems?</li>
-                    </ul>
-                </div>
+                
             </div>
         </section>
 
@@ -166,37 +168,30 @@
                 <div class="content-block scroll-reveal">
                     <h3>Player Research</h3>
                     <p>
-
+                        Early testing revealed that players could usually identify whether they had succeeded or failed, but struggled to explain the reasons behind their performance. Many players could recall obvious mistakes, such as entering incorrect keypad codes or losing lives, but were unable to identify larger behavioural trends such as inefficient resource management or excessive risk-taking.
+                        Interestingly, participants consistently requested more information after completing sessions. Rather than asking for larger rewards or higher scores, they wanted explanations. Players were less interested in being judged and more interested in understanding their behaviour.
                     </p>
                 </div>
 
                 <div class="finding-grid scroll-reveal">
                     <div class="finding-card">
-                        <h4>Finding 1</h4>
+                        <h4>Finding </h4>
                         <p>
-
+                            Players wanted interpretation rather than evaluation. They were less interested in score values and more interested
+                            <ul class="content-list">
+                                <li>Why they succeeded</li>
+                                <li>Why they failed</li>
+                                <li>How they could improve</li>
+                            </ul>
                         </p>
                     </div>
-
-                    <div class="finding-card">
-                        <h4>Finding 2</h4>
-                        <p>
-
-                        </p>
-                    </div>
-
-                    <div class="finding-card">
-                        <h4>Finding 3</h4>
-                        <p>
-
-                        </p>
-                    </div>
+                    
                 </div>
 
                 <div class="content-block scroll-reveal">
                     <h3>Design Implications</h3>
                     <p>
-
+                        The feedback system needed to move beyond numerical evaluation and instead function as a reflection tool. Metrics would therefore be grouped into behavioural categories that represented different dimensions of player decision-making. This approach would allow players to recognise strengths, weaknesses, and patterns in their gameplay rather than simply compare scores.
                     </p>
                 </div>
             </div>
@@ -212,22 +207,57 @@
                 <div class="content-block scroll-reveal">
                     <h3>System Architecture</h3>
                     <p>
-
+                        The system operates as a post-session analytics framework that continuously tracks player behaviour throughout gameplay and translates that information into meaningful feedback once a session concludes.
+                        Rather than measuring a single performance variable, the system evaluates multiple dimensions of player behaviour simultaneously. Resource management, clue interpretation, survival stability, and progression efficiency are analysed independently before being combined into an overall performance profile.
+                        The architecture was designed around the assumption that player behaviour is multidimensional. A player may demonstrate excellent survival skills while performing poorly at clue interpretation, or may solve puzzles efficiently while mismanaging resources. The system therefore seeks to communicate these nuances rather than reduce performance to a single value.
                     </p>
                 </div>
 
-                <!--Mechanics Breakdown-->
+                
                 <div class="mechanics-grid scroll-reveal">
                     <div class="mechanic-card">
-                        <h4></h4>
-                        <p></p>
+                        <h4>Gameplay Metric Tracking</h4>
+                        <p>
+                            The system continuously records player actions such as battery depletion, clue collection, incorrect keypad inputs, life loss, and session completion. These events provide the raw behavioural data required for performance analysis.
+                        </p>
                     </div>
+
+                    <div class="mechanic-card">
+                        <h4>Behavioural Categorisation</h4>
+                        <p>
+                            Tracked metrics are grouped into larger behavioural dimensions including resource management, information processing, and survival performance. This transforms isolated statistics into meaningful patterns that reveal how the player approaches uncertainty.
+                        </p>
+                    </div>
+
+                    <div class="mechanic-card">
+                        <h4>Performance Archetypes</h4>
+                        <p>
+                            Rather than ranking players through a single score, the system assigns identity-based categories such as Strategist, Analyst, and Survivor. These archetypes communicate playstyle characteristics and encourage players to experiment with alternative approaches.
+                        </p>
+                    </div>
+
+                    <div class="mechanic-card">
+                        <h4>Mission Rating System</h4>
+                        <p>
+                            Performance is summarised through a rating framework that combines multiple behavioural indicators into a single overview. This provides an accessible summary while preserving the depth of the underlying analytics.
+                        </p>
+                    </div>
+
+                    <div class="mechanic-card">
+                        <h4>Badge & Achievement Feedback</h4>
+                        <p>
+                            Badges function as symbolic recognition of behavioural mastery rather than simple completion rewards. They reinforce specific playstyles and provide players with long-term progression goals beyond level completion.
+                        </p>
+                    </div>
+
+                
                 </div>
 
                 <div class="content-block scroll-reveal">
                     <h3>Design Rationale</h3>
                     <p>
-
+                        The system was intentionally designed around behavioural interpretation rather than performance evaluation. Traditional score systems communicate who performed best; this system attempts to communicate how performance occurred.
+                        This distinction aligns directly with the project's broader focus on uncertainty. Because players are constantly making decisions with incomplete information, understanding those decisions becomes more valuable than measuring their final outcome. The feedback system therefore acts as a reflective layer that reinforces the game's central themes by encouraging players to analyse their own behaviour.
                     </p>
                 </div>
             </div>
@@ -243,22 +273,30 @@
                 <div class="content-block scroll-reveal">
                     <h3>Technical Approach</h3>
                     <p>
-
+                        The system was implemented using a centralised gameplay tracking architecture that records player actions throughout a session. Gameplay events are stored and processed at runtime before being passed to the Session Breakdown Screen upon completion.
+                        Metrics are collected from multiple systems including the Light & Darkness System, the Clue System, the Keypad System, and player survival systems. Once the session ends, the collected data is analysed and transformed into performance categories, mission ratings, and archetype assignments.
+                        This architecture allows multiple independent systems to contribute data toward a unified feedback framework.
                     </p>
                 </div>
 
                 <div class="content-block scroll-reveal">
                     <h3>Playtesting Iterations</h3>
                     <p>
-
+                        The first iteration consisted of a simple mission-complete screen displaying success or failure. Testing revealed that players rarely engaged with the screen beyond confirming whether they had completed the level.
+                        The second iteration introduced numerical performance statistics. While players appreciated the additional information, many struggled to interpret the significance of individual metrics.
+                        The third iteration introduced behavioural archetypes and visual performance categories. Testing indicated significantly higher engagement because players could now connect metrics to meaningful interpretations of their playstyle
                     </p>
                 </div>
 
                 <div class="content-block scroll-reveal">
                     <h3>Key Challenges</h3>
                     <ul class="content-list">
-                        <li></li>
+                        <li>Balancing informational depth with accessibility</li>
                     </ul>
+                    <p>
+                        The primary challenge involved balancing informational depth with accessibility. The system needed to provide enough detail to support reflection without overwhelming players with excessive data.
+                        Another challenge involved ensuring that metrics accurately represented meaningful behaviours. Poorly chosen metrics risk rewarding unintended actions or encouraging optimisation strategies that conflicted with the game's design goals. Considerable iteration was therefore dedicated to selecting metrics that reflected the intended experience of uncertainty management and strategic decision-making.
+                    </p>
                 </div>
             </div>
         </section>
@@ -273,34 +311,30 @@
                 <div class="content-block scroll-reveal">
                     <h3>Measurable Impact</h3>
                     <p>
+                        Playtesting indicated that the system successfully increased post-session engagement and replay motivation. Players spent significantly more time reviewing feedback compared to previous iterations and demonstrated improved understanding of how specific decisions affected performance. Replay behaviour also changed. Rather than attempting to simply achieve higher scores, many players replayed the level to pursue alternative archetypes and improve specific behavioural metrics.
 
                     </p>
                 </div>
                     
                 <div class="outcome-metrics scroll-reveal">
                    <div class="metric">
-                        <span class="metric-value">87%</span>
+                        <span class="metric-value">78%</span>
                         <span class="metric-label">Tension increases</span>
                     </div>
 
                     <div class="metric">
-                        <span class="metric-value">3%</span>
+                        <span class="metric-value">10% increase</span>
                         <span class="metric-label">Session Duration</span>
                     </div>
 
                     <div class="metric">
-                        <span class="stat-number">80%</span>
+                        <span class="stat-number">85%</span>
                         <span class="stat-label">Playtesting Satisfaction </span>
                     </div>
 
                 </div>
 
-                <div class="content-block scroll-reveal">
-                    <h3>Player Feedback</h3>
-                    <p>
-
-                    </p>
-                </div>
+                
             </div>
         </section>
 
@@ -314,29 +348,19 @@
                 <div class="content-block scroll-reveal">
                     <h3>Key Learnings</h3>
                     <p>
+                        The most important lesson from this system was that feedback systems are fundamentally communication systems. Their purpose is not merely to measure behaviour, but to help players understand behaviour.
+
+                        The project demonstrated that replayability can emerge from self-improvement rather than competition. By focusing on behavioural understanding instead of numerical optimisation, the system encourages players to reflect on their decision-making processes and experiment with alternative strategies.
 
                     </p>
                 </div>
 
-                <div class="learnings-list scroll-reveal">
-                    <div class="learning-item">
-                        <h4></h4>
-                        <p>
-
-                        </p>
-                    </div>
-
-                    <div class="learning-item">
-                        <h4></h4>
-                        <p>
-
-                        </p>
-                    </div>
-                </div>
+            
 
                 <div class="content-block scroll-reveal">
                     <h3>Future Directions</h3>
                     <p>
+                        Future iterations could expand the framework through longitudinal tracking, allowing players to compare performance across multiple sessions and observe how their playstyle evolves over time. Additional analytics could also explore relationships between systems, revealing how resource management, clue interpretation, and risk assessment influence one another throughout gameplay.
 
                     </p>
                 </div>
@@ -358,10 +382,10 @@
             <div class="footer-section">
                 <h3>Navigation</h3>
                 <ul>
-                  <li><a href="./index.html">Home</a></li>
-                  <li><a href="./html/work.html">Work</a></li>
-                  <li><a href="./html/about.html">About</a></li>
-                  <li><a href="./html/contact.html">Contact</a></li>
+                  <li><a href="/index.html">Home</a></li>
+                  <li><a href="./work.html">Work</a></li>
+                  <li><a href="./about.html">About</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
                </ul>
             </div>
 
