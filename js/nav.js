@@ -1,8 +1,8 @@
 const nav_items = [
-    {label: 'Home', href: 'index.html'},
-    {label: 'Work', href: 'html/work.html'},
-    {label: 'About', href: 'html/about.html'},
-    {label: 'Contact', href: 'html/contact.html'},
+    {label: 'Home', href: '/portfolio-website/index.html'},
+    {label: 'Work', href: '/portfolio-website/html/work.html'},
+    {label: 'About', href: '/portfolio-website/html/about.html'},
+    {label: 'Contact', href: '/portfolio-website/html/contact.html'},
 ];
 
 function resolveHref(rootRelativeHref) {
