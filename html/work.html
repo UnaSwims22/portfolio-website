@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Una's Portfolio Website</title>
+
+
+link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/modal.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="stylesheet" href="/css/animations.css">
     <link rel="stylesheet" href="/css/components.css">
-
+    <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/responsive.css">
 
     <script defer src="/js/nav.js" ></script>
     <script defer src="/js/animations.js" ></script>
@@ -26,10 +32,10 @@
         <nav>
             <div class="nav-wrapper">
                 <div class="pill-container">
-                    <a href="/index.html" class="toggle">Home</a>
-                    <a href="./work.html" class="toggle">Work</a>
-                    <a href="./about.html" class="toggle">About</a>
-                    <a href="./contact.html" class="toggle">Contact</a>
+                    <a href="/index.html" class="nav-link">Home</a>
+                    <a href="./work.html" class="nav-link">Work</a>
+                    <a href="./about.html" class="nav-link">About</a>
+                    <a href="./contact.html" class="nav-link">Contact</a>
                 </div>
             </div>
         </nav>
@@ -37,18 +43,18 @@
 
     <main>
 
-        <section class="hero fade-on-load">
+        <section class="hero ">
             <div class="hero-content">
-                <div class="hero-center">
-                    <h1>
-                        Systems <span class="text-primary">Investigations</span>
-                    </h1>
-                    <p>
-                        A collection of interaction systems, design case studies, and technical 
-                        implementations. Each project explores how systems shape behaviour, 
-                        guide interaction, and create meaningful experiences.
-                    </p>
-                </div>
+                <h1 class="hero-headline anim-fade-in-up-delay-1">
+                    Systems <span class="text-primary">Investigations</span>
+                </h1>
+
+                <p class="hero-sub anim-fade-in-up-delay-2" >
+                    A collection of interaction systems, design case studies, and technical 
+                    implementations. Each project explores how systems shape behaviour, 
+                    guide interaction, and create meaningful experiences.
+                </p>
+                
             </div>
         </section>
 
@@ -56,25 +62,22 @@
             <div class="container">
 
                 <div class="projects-grid">
-                    <div class="project-card-reveal modal-trigger hover-lift"
+                    <div class="project-card scroll-reveal modal-trigger"
+                       data-delay="1"
                        data-modal-type="project"
-                       data-project-title="Light & Darkness System"
+                       data-project-title="Light &amp; Darkness System"
                        data-project-image=""
                        data-project-description="Visibility as a consumable resource that shapes tension and player behaviour."
-                       data-project-tags="UX, Horror Systems, Resource Management"
                        data-project-details="This system investigates how resource management can generate tension more effectively than scripted events. By treating visibility as a strategic decision, the system creates compound decision-making rather than isolated resource management"
                        data-case-study="./light-darkness-system.html">
                        
 
-                       <div class="project-card-image">
-                           <img src="" 
-                                alt="Light & Darkness System"
-                                class="lazy"
-                                data-src="">
+                       <div class="project-card-image no-image placeholder-1">
+                        <span class="img-label">Light &amp; Darkness System</span>
                        </div>
 
                        <div class="project-card-content">
-                           <h3 class="project-card-title">Light & Darkness System</h3>
+                           <h3 class="project-card-title">Light &amp; Darkness System</h3>
                            <p class="project-card-description">
                               Visibility as a consumable resource that shapes tension and player behaviour.
                            </p>
@@ -86,21 +89,18 @@
                         </div>
                     </div>
 
-                    <div class="project-card-reveal modal-trigger hover-lift"
+                    <div class="project-card scroll-reveal modal-trigger"
+                       data-delay="2"
                        data-modal-type="project"
                        data-project-title="Maze Navigation System"
                        data-project-image=""
                        data-project-description="Exploration-focused navigation using environmental guidance and uncertainty."
-                       data-project-tags="Navigation, Information Architecture, UX"
                        data-project-details="This system investigates how mazes can create uncertainty without disorientation. By treating navigation as information acquisition, players gradually construct a mental model through exploration, making the maze function as an information system."
                        data-case-study="./maze-navigation-system.html">
                        
 
-                       <div class="project-card-image">
-                           <img src="" 
-                                alt="Maze Navigation System"
-                                class="lazy"
-                                data-src="">
+                       <div class="project-card-image no-image placeholder-2">
+                        <span class="img-label"> Maze Navigation System</span>
                        </div>
 
                        <div class="project-card-content">
@@ -117,22 +117,18 @@
                         </div>
                     </div>
 
-                    <div class="project-card-reveal modal-trigger hover-lift"
+                    <div class="project-card scroll-reveal modal-trigger"
+                        data-delay="3"
                         data-modal-type="project"
                         data-project-title="Performance Feedback System"
                         data-project-image=""
                         data-project-description="Transforming gameplay metrics into understandable behavioural feedback."
-                        data-project-tags="Navigation, Information Architecture, UX"
                         data-project-details="The system investigates whether behavioural feedback can create stronger replay motivation than abstract scoring."
                         data-case-study="./performance-feedback-system.html">
 
-                        
-
-                        <div class="project-card-image">
-                           <img src="" 
-                                alt="Performance Feedback System"
-                                class="lazy"
-                                data-src="">
+                    
+                        <div class="project-card-image no-image placeholder-3">
+                           <span class="img-label">Performance Feedback System</span>
                        </div>
 
                        <div class="project-card-content">
@@ -148,21 +144,18 @@
                        </div>
                     </div>
 
-                    <div class="project-card-reveal modal-trigger hover-lift"
+                    <div class="project-card scroll-reveal modal-trigger"
+                       data-delay="4"
                        data-modal-type="project"
                        data-project-title="Protocol Transformation System"
                        data-project-image=""
                        data-project-description="Puzzles that remain solvable while changing their rules and transformation protocols."
-                       data-project-tags="Puzzle Design, Systems, Mechanics"
                        data-project-details="This system challenges players to understand a system rather than memorise an answer"
                        data-case-study="./protocol-transformation-system.html">
                        
 
-                       <div class="project-card-image">
-                           <img src="" 
-                                alt="Protocol Transformation System"
-                                class="lazy"
-                                data-src="">
+                       <div class="project-card-image no-image placeholder-4">
+                           <span class="img-label"> Protocol Transformation System</span>
                       </div>
 
                        <div class="project-card-content">
@@ -173,7 +166,7 @@
                            <div class="project-card-tags">
                               <span class="project-tag">Puzzle Design</span>
                               <span class="project-tag">Systems</span>
-                              <span class="project-tag">Mechanics</span>
+                         <span class="project-tag">Mechanics</span>
                            </div>
                         </div>
                     </div>
@@ -193,7 +186,7 @@
 
                 <a href="./contact.html" class="btn btn-primary scroll-reveal">
                     Get In Touch
-                </a>
+                </a>     
             </div>
         </section>
     </main>

@@ -32,6 +32,7 @@
 
 .modal-content.modal-large {
     max-width: 900px;
+    padding: var(--spacing-sm);
 }
 
 .modal-close {
@@ -68,22 +69,6 @@
 .modal-description {
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-1g);
-}
-
-.modal-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-1g);
-}
-
-.project-tag {
-    background-color: rgba(255, 60, 120, 0.1);
-    color: var(--color-primary);
-    padding: 4px 12px;
-    border-radius: var(--radius-full);
-    font-size: var(--font-size-xs);
-    font-weight: 600;
 }
 
 .modal-details {

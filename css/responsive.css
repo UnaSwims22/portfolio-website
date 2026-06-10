@@ -366,3 +366,67 @@ select {
     margin-top: var(--spacing-xl);
   }
 }
+
+@media (max-width: 767px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction:  column;
+        background-color: var(--color-bg);
+        padding: var(--spacing-md);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+
+    .hero-center h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .container { padding: 0 var(--spacing-md); }
+}
+
+@media (min-width: 768px) and (max-width:1023px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .skills-grid { grid-template-columns: repeat(3, 1fr); }
+   
+}

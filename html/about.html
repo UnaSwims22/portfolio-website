@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Una's Portfolio Website</title>
+
+    link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/components.css">
     <link rel="stylesheet" href="/css/modal.css">
     <link rel="stylesheet" href="/css/animations.css">
-    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+  
 
 
     <script defer src="/js/nav.js"></script>
@@ -27,10 +34,10 @@
         <nav>
             <div class="nav-wrapper">
                 <div class="pill-container">
-                    <a href="/index.html" class="toggle">Home</a>
-                    <a href="./work.html" class="toggle">Work</a>
-                    <a href="./about.html" class="toggle">About</a>
-                    <a href="./contact.html" class="toggle">Contact</a>
+                    <a href="/index.html" class="nav-link">Home</a>
+                    <a href="./work.html" class="nav-link">Work</a>
+                    <a href="./about.html" class="nav-link">About</a>
+                    <a href="./contact.html" class="nav-link">Contact</a>
                 </div>
             </div>
         </nav>
@@ -39,16 +46,17 @@
     <main>
         <section class="hero fade-on-load">
             <div class="hero-content">
-                <div class="hero-center">
-                    <h1>
+                <h1 class="hero-headline anim-fade-in-up-delay-1" >
                         About <span class="text-primary"> Me</span>
-                    </h1>
-                    <p>
+                </h1>
+
+                <p class="hero-sub anim-fade-in-up-delay-2">
                         I'm an interaction designer and developer passionate about creating 
                         systems that shape behaviour, guide interaction, and create meaningful 
                         digital experiences.
-                    </p>
-                </div>
+                </p>
+                
+        
             </div>
         </section>
 
