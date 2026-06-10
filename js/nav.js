@@ -1,5 +1,5 @@
 const nav_items = [
-    {label: 'Home', href: '/portfolio-websiteindex.html'},
+    {label: 'Home', href: '/portfolio-website/index.html'},
     {label: 'Work', href: '/portfolio-website/html/work.html'},
     {label: 'About', href: '/portfolio-website/html/about.html'},
     {label: 'Contact', href: '/portfolio-website/html/contact.html'},
